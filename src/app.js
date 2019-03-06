@@ -14,7 +14,6 @@ const server = http.createServer((request, response) => {
 
     // Get request URL
     var request_url = request.url;
-    var request_url 
 
     var request_type = request.method;
 
