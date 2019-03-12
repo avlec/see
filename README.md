@@ -3,7 +3,7 @@
 SEE bids farewell to the dark ages of downloading and unzipping datasets. Instead of bringing the large amounts of data to the execution environment, SEE brings your code into the cloud where the data already exists. This will grant faster data access, scalability with computation on the data, and providing features most wouldn’t dare to implement to run their code.
 
 SEE is also designed to take a users code base, perform linting, security analysis, and offer change suggestions related to pythons best practices.
-Plug and play modules for scanning and other thins.
+Plug and play modules for scanning and other things.
 
 
 ## Features
@@ -44,7 +44,7 @@ Plug and play modules for scanning and other thins.
   * Look for license file -> "Is your project licensed? There's no apparent license file" Then recommends a basic template for the license file
   * Another example: "Looks like you don't have a readme, you should make one and tell people about your project"
 
-#This is the RACI chart for the group.
+# This is the RACI chart for the group.
 
 https://docs.google.com/spreadsheets/d/1-4burQmP3Kx1A23MB8o8pErcu7556QK_79ZMyWVKicE/edit#gid=0
 
@@ -70,5 +70,5 @@ Devlyn Dorfer - V00846516
 ## Acknowledgments
 * Yvonne's awesomeness
 * Bing Gao's help on Compute Canada's code and creating docker container instances
-* Will from Urthecast for understanding earth observational data and the applications of this project
+* Will from Urthecast for providing a better understanding earth observational data and the applications of this project
 * The Canadian Digital Technology Supercluster for providing this project
