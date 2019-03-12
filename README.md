@@ -50,3 +50,18 @@ A static copy of which was handed over to the TA and discusses our current frame
 We currently have the list of some core filters we want included and are in the process of figuring out the implementation of these filters.
 
 We have some napkin diagrams of our UI already laid out as well.
+
+## Versioning
+
+Version 1.0
+
+## Authors
+
+Juan Comish - V00839267\
+Alec Cox -  V00846488\
+Michail Roesli - V008953253\
+Robbie Tulip - V00846133\
+Grant Hames Morgan - V00\
+Devlyn Dorfer - V00846516
+
+## Acknowledgments
