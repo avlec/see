@@ -17,10 +17,11 @@ Plug and play modules for scanning and other thins.
 # Project Management
 
 ## Things done
-* Research client side frameworks
-* Research server side frameworks
-* Create Repo and establish CI tools
-* Create simple blueprints for proposed System
+* Researched client side frameworks
+* Researched server side frameworks
+* Created Repo and establish CI tools
+* Created simple blueprints for proposed System
+* List of core filters we want included
 
 ## Stuff todo
 * Research python tools.
