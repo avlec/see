@@ -50,9 +50,9 @@ https://docs.google.com/spreadsheets/d/1-4burQmP3Kx1A23MB8o8pErcu7556QK_79ZMyWVK
 
 A static copy of which was handed over to the TA and discusses our current framework planning.
 
-We currently have the list of some core filters we want included and are in the process of figuring out the implementation of these filters.
 
-We have some napkin diagrams of our UI already laid out as well.
+## Simple diagram of our UI
+![Simple diagram of our UI](docs/SEE-Rough-UI.png?raw=true "SEE code insertions example")
 
 ## Versioning
 
