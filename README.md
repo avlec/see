@@ -17,16 +17,29 @@ Plug and play modules for scanning and other thins.
 # Project Management
 
 ## Things done
+* Created Repo and established CI tools
 * Researched client side frameworks
 * Researched server side frameworks
-* Created Repo and establish CI tools
 * Created simple blueprints for proposed System
 * List of core filters we want included
+  * source code length warnings
+  * lint warnings (ex: inconsistent styles)
+  * inconsistent code language verions (ex: python 2.7 vs 3.x)
+  * common sql mistakes
+* Reasearched some existing web app solutions
+  * pep8online (https://github.com/Bryukh/pep8online)
 
 ## Stuff todo
-* Research python tools.
-* React dir tree.
-* React in browser code editor.
+* Research python tools
+* React dir tree
+* React in browser code editor
+* study gitlab CI/CD for python
+
+## More ideas
+* Boolean question flowchart tree
+  * no requirements.txt or similar -> "Does your project use any dependencies?" If yes, recommend a req.txt...
+  * Look for license file -> "Is your project licensed? There's no apparent license file" Then recommends a basic template for the license file
+  * Another example: "Looks like you don't have a readme, you should make one and tell people about your project"
 
 #This is the RACI chart for the group.
 
