@@ -64,7 +64,11 @@ Juan Comish - V00839267\
 Alec Cox -  V00846488\
 Michail Roesli - V008953253\
 Robbie Tulip - V00846133\
-Grant Hames Morgan - V00\
+Grant Hames Morgan - V00857827\
 Devlyn Dorfer - V00846516
 
 ## Acknowledgments
+* Yvonne's awesomeness
+* Bing Gao's help on Compute Canada's code and creating docker container instances
+* Will from Urthecast for understanding earth observational data and the applications of this project
+* The Canadian Digital Technology Supercluster for providing this project
