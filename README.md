@@ -1,7 +1,10 @@
 # Simplified Execution Engine
 
-Our system is designed to take a users code base, perform linting, security analysis, and offer change suggestions related to pythons best practices.
+SEE bids farewell to the dark ages of downloading and unzipping datasets. Instead of bringing the large amounts of data to the execution environment, SEE brings your code into the cloud where the data already exists. This will grant faster data access, scalability with computation on the data, and providing features most wouldn’t dare to implement to run their code.
+
+SEE is also designed to take a users code base, perform linting, security analysis, and offer change suggestions related to pythons best practices.
 Plug and play modules for scanning and other thins.
+
 
 ## Features
    - Automatic code linting and formatting.
