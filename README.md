@@ -44,6 +44,9 @@ Plug and play modules for scanning and other things.
   * Look for license file -> "Is your project licensed? There's no apparent license file" Then recommends a basic template for the license file
   * Another example: "Looks like you don't have a readme, you should make one and tell people about your project"
 
+## Risk Analysis
+
+
 # This is the RACI chart for the group.
 
 https://docs.google.com/spreadsheets/d/1-4burQmP3Kx1A23MB8o8pErcu7556QK_79ZMyWVKicE/edit#gid=0
