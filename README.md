@@ -5,7 +5,6 @@ SEE bids farewell to the dark ages of downloading and unzipping datasets. Instea
 SEE is also designed to take a users code base, perform linting, security analysis, and offer change suggestions related to pythons best practices.
 Plug and play modules for scanning and other things.
 
-
 ## Features
    - Automatic code linting and formatting.
    - Execution environment detection.
@@ -19,7 +18,18 @@ Plug and play modules for scanning and other things.
 
 # Project Management
 
-## Things done
+## Iteration 1
+
+### UI
+
+
+### Data access
+This is not included in our project.
+
+### Business Logic
+
+
+### Things done
 * Created Repo and established CI tools
 * Researched client side frameworks
 * Researched server side frameworks
@@ -32,34 +42,37 @@ Plug and play modules for scanning and other things.
 * Reasearched some existing web app solutions
   * pep8online (https://github.com/Bryukh/pep8online)
 
-## Stuff todo
+### Stuff todo
 * Research python tools
 * React dir tree
 * React in browser code editor
 * study gitlab CI/CD for python
 
-## More ideas
+### More ideas
 * Boolean question flowchart tree
   * no requirements.txt or similar -> "Does your project use any dependencies?" If yes, recommend a req.txt...
   * Look for license file -> "Is your project licensed? There's no apparent license file" Then recommends a basic template for the license file
   * Another example: "Looks like you don't have a readme, you should make one and tell people about your project"
 
-## Risk Analysis
-
-
-# This is the RACI chart for the group.
-
+### This is the RACI chart for the group.
+A static copy of which was handed over to the TA and discusses our current framework planning.
 https://docs.google.com/spreadsheets/d/1-4burQmP3Kx1A23MB8o8pErcu7556QK_79ZMyWVKicE/edit#gid=0
 
-A static copy of which was handed over to the TA and discusses our current framework planning.
-
-
-## Simple diagram of our UI
+### Simple diagram of our UI
 ![Simple diagram of our UI](docs/SEE-Rough-UI.png?raw=true "SEE code insertions example")
+
+## Iteration 2
+
+### Risk Analysis
+* Data retention policies not established - not part of our project
+* Cannot guarantee perfect code sanitization which can be a risk to our system since it will remotely run their code - very difficult to be able to perfectly link and filter for every single error
+
+### More ideas 
+* Should mention somewhere in application that we are no liable for any damages caused by the program that is linted through out system
 
 ## Versioning
 
-Version 1.0
+Version 2.0
 
 ## Authors
 
