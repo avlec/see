@@ -75,6 +75,41 @@ The project task list is also documented in our RACI chart.
   - Ace editor (https://github.com/securingsincity/react-ace)
   - Drag and drop files
 
+<<<<<<< HEAD
+=======
+---
+
+## Task list
+
+The project task list is also documented in our RACI chart.
+
+### Complete
+
+- [x] Create repository and setup CI tools
+- [x] Research client side frameworks
+- [x] Research server side frameworks
+- [x] Create simple blueprints for proposed system
+- [x] Create list of core filters to include:
+  - Source code length warnings
+  - Lint warnings (ex: inconsistent styles)
+  - Inconsistent code language verions (ex: Python 2.7 vs 3.x)
+  - Common SQL mistakes
+- [x] Research existing web application solutions:
+  - Similar: `pep8online` https://github.com/Bryukh/pep8online
+
+### In progress
+
+- [ ] Research Python tools used in the community
+- [ ] Explore Python community for tacit knowledge
+- [ ] Study Gitlab CI/CD for Python
+- [ ] Setup React components for:
+  - Directory tree
+  - Sidebar
+  - Modals
+  - Ace editor (https://github.com/securingsincity/react-ace)
+  - Drag and drop files
+
+>>>>>>> da0d4950ab30fdc37232a88e5dcd9ae7038cced3
 ### Future
 
 - [ ] Make a boolean question flowchart tree. Examples:
