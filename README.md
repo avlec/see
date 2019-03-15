@@ -11,7 +11,7 @@ SEE is also designed to take a users code base, perform linting, security analys
    - Codebase security audits.
    - Determining python version automatically.
    - Optimization.
-   - Determining what level of stupid they are.
+   - Determining how computationally intelligent the user is.
    - File/database caching optimizations, speed hacks.
    - Recomendations for improvements to code bases.
 
@@ -22,15 +22,17 @@ In this section we will provide progress reports on the project through iteratio
 The first iteration requires UI, Data Access, and Business Logic interactions and logic.
 
 ### UI
+Some of the main UI interfaces that will be included in our project
+- Plug and play module
+    - input code to be linted 
 
-
-### Data access
+### Data Access
 
 
 ### Business Logic
+- filtering and linting 
 
-
-### Things done
+### Things Done
 * Created Repo and established CI tools
 * Researched client side frameworks
 * Researched server side frameworks
@@ -43,13 +45,13 @@ The first iteration requires UI, Data Access, and Business Logic interactions an
 * Reasearched some existing web app solutions
   * pep8online (https://github.com/Bryukh/pep8online)
 
-### Stuff todo
+### Stuff To Do
 * Research python tools
 * React dir tree
 * React in browser code editor
 * study gitlab CI/CD for python
 
-### More ideas
+### More Ideas
 * Boolean question flowchart tree
   * no requirements.txt or similar -> "Does your project use any dependencies?" If yes, recommend a req.txt...
   * Look for license file -> "Is your project licensed? There's no apparent license file" Then recommends a basic template for the license file
