@@ -2,8 +2,7 @@
 
 SEE bids farewell to the dark ages of downloading and unzipping datasets. Instead of bringing the large amounts of data to the execution environment, SEE brings your code into the cloud where the data already exists. This will grant faster data access, scalability with computation on the data, and providing features most wouldn’t dare to implement to run their code.
 
-SEE is also designed to take a users code base, perform linting, security analysis, and offer change suggestions related to pythons best practices.
-Plug and play modules for scanning and other things.
+SEE is also designed to take a users code base, perform linting, security analysis, and offer change suggestions related to pythons best practices. Plug and play modules for scanning and other things.
 
 ## Features
    - Automatic code linting and formatting.
@@ -17,14 +16,16 @@ Plug and play modules for scanning and other things.
    - Recomendations for improvements to code bases.
 
 # Project Management
+In this section we will provide progress reports on the project through iterations discussing interations, logic and analysis for different parts of the system.
 
 ## Iteration 1
+The first iteration requires UI, Data Access, and Business Logic interactions and logic.
 
 ### UI
 
 
 ### Data access
-This is not included in our project.
+
 
 ### Business Logic
 
