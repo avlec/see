@@ -1,41 +1,35 @@
-# Simplified Execution Engine
+# Simple Examination Enviroment - SEE
 
-SEE bids farewell to the dark ages of downloading and unzipping datasets.
-Instead of bringing the large amounts of data to the execution environment, SEE
-brings your code into the cloud where the data already exists. This will grant
-faster data access, scalability with computation on the data, and providing
-features most wouldn’t dare to implement to run their code.
+SEE is a web based examination tool to take a provided set of Python scripts and
+review them for linting, formatting, inconsistencies, security vulnerabilties,
+and other tests. Changes are suggested and recommended to have the code better
+follow known best practices.
 
-SEE is also designed to take a users code base, perform linting, security
-analysis, and offer change suggestions related to pythons best practices. Plug
-and play modules for scanning and other things.
+SEE attempts to teach users how to write better, more maintainable code, and
+leave them with skills they can use in all of their projects.
 
 ## Features
-   - Automatic code linting and formatting.
-   - Execution environment detection.
-   - Library use detection.
-   - Codebase security audits.
-   - Determining Python version automatically.
-   - Determining how technologically literate the users are.
-   - File/database caching optimizations, speed hacks.
-   - Recomendations for improvements and optimizations to the codebase.
+
+  - Automatic code linting and formatting.
+  - Execution environment detection.
+  - Library use detection.
+  - Codebase security audits.
+  - Determining Python version automatically.
+  - Determining how technologically literate the users are.
+  - File/database caching optimizations, speed hacks.
+  - Recomendations for improvements and optimizations to the codebase.
 
 ## Project management
 
-In this section we will provide progress reports on the project through
-iterations discussing interations, logic and analysis for different parts of the
-system.
+This section provides progress reports on the project by discussing each
+interation of the application.
 
 ## Iteration 1
 
-The first iteration requires UI, Data Access, and Business Logic interactions
-and logic.
+The first iteration requires UI, Business Logic, Data Access interactions to
+have been established and discussed.
 
 ### UI
-
-Some of the main UI interfaces that will be included in our project:
-  - Plug and play module
-  - input code to be linted 
 
 Our server deploys a single page application (SPA) written with the React
 framework to a browser. Our interface consists of 4 main components:
@@ -46,6 +40,10 @@ framework to a browser. Our interface consists of 4 main components:
     - Directory tree of uploaded files
   - Bottom panel
     - List of recommendations and issues reported in the uploaded codebase
+
+Here is a mockup of the proposed UI:
+
+![UI](docs/SEE-Rough-UI.png?raw=true "SEE code insertions example")
 
 The client is entirely self supporting and does not need to be contiuously
 rerendered by the server. After initialization, client and server only talk over
@@ -89,7 +87,7 @@ This happens without user involvement.
 A similar process occurs for changes to files; the content must be resent.
 
 The server uses third party linting and code analysis tools which may reach out
-to internet services for further processing. **See risk analysiks for details.**
+to internet services for further processing. **See risk analysis for details.**
 
 ---
 
@@ -142,10 +140,6 @@ framework planning.
 
 https://docs.google.com/spreadsheets/d/1-4burQmP3Kx1A23MB8o8pErcu7556QK_79ZMyWVKicE/edit#gid=0
 
-## UI diagram
-
-![UI](docs/SEE-Rough-UI.png?raw=true "SEE code insertions example")
-
 ---
 
 ## Iteration 2
@@ -195,9 +189,9 @@ Devlyn Dorfer - V00846516
 
 ## Acknowledgments
 
-- Yvonne's awesomeness
-- Bing Gao's help on Compute Canada's code and creating docker container
-  instances
+- Yvonne's enthusiasm for keeping us engaged
+
+- Bing Gao's help on Compute Canada's code and creating Docker containers
+
 - Will from Urthecast for providing a better understanding earth observational
   data and the applications of this project
-- The Canadian Digital Technology Supercluster for providing this project
