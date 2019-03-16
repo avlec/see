@@ -15,11 +15,10 @@ and play modules for scanning and other things.
    - Execution environment detection.
    - Library use detection.
    - Codebase security audits.
-   - Determining python version automatically.
-   - Optimization.
-   - Determining how computationally intelligent the user is.
+   - Determining Python version automatically.
+   - Determining how technologically literate the users are.
    - File/database caching optimizations, speed hacks.
-   - Recomendations for improvements to code bases.
+   - Recomendations for improvements and optimizations to the codebase.
 
 ## Project management
 
@@ -33,15 +32,64 @@ The first iteration requires UI, Data Access, and Business Logic interactions
 and logic.
 
 ### UI
-Some of the main UI interfaces that will be included in our project
-- Plug and play module
-    - input code to be linted 
+
+Some of the main UI interfaces that will be included in our project:
+  - Plug and play module
+  - input code to be linted 
+
+Our server deploys a single page application (SPA) written with the React
+framework to a browser. Our interface consists of 4 main components:
+
+  - Ace text editor (https://github.com/securingsincity/react-ace)
+  - Drag and drop file upload
+  - Side panel
+    - Directory tree of uploaded files
+  - Bottom panel
+    - List of recommendations and issues reported in the uploaded codebase
+
+The client is entirely self supporting and does not need to be contiuously
+rerendered by the server. After initialization, client and server only talk over
+JSON messages and `x-url-encoded multipart` form data for file upload.
+
+We intend on supporting only Python for syntax highlighting (possibly via
+highlight.js) and linting of the code. The syntax highlighting is purely
+aesthetic and handled in browser.
+
+### Business Logic
+
+Our server is a Node + Express (framework) application that hosts a REST API to
+support sessions, file upload, and running some or all "filters" on some or all
+of the uploaded files.
+
+Our program passes the uploaded files, from the UI, through a series of filters.
+A "filter" is a linters, code checkers, or conditional expression to check for
+such as line length or character encoding. These may be implemented in any
+language, as Node is able to spawn children for other executables as needed and
+read from their stdout.
+
+There's some nice Python linters and security audit testers available. So we'll
+be using Pylama. GitLab has a well established CI/CD tool for Python, so we'll
+be looking at how they do things and working from there.
 
 ### Data Access
 
+We store files server side for the duration of the session, which can be
+terminated by the user directly or expires after 10 minutes of inactivity from a
+client.
 
-### Business Logic
-- filtering and linting 
+Sessions are started once a user uploads a file. Requests to run a file through
+a filter does not reupload any content - which is the need for a session to
+provide state between the client and server to reference the same files.
+
+If a user leaves their client idle and lets the server side files be purged due
+to expiration, the session may still be revived. When they return and try
+linting a file, the server asks the client to resend the files and try again.
+This happens without user involvement.
+
+A similar process occurs for changes to files; the content must be resent.
+
+The server uses third party linting and code analysis tools which may reach out
+to internet services for further processing. **See risk analysiks for details.**
 
 ---
 
@@ -104,10 +152,26 @@ https://docs.google.com/spreadsheets/d/1-4burQmP3Kx1A23MB8o8pErcu7556QK_79ZMyWVK
 
 ### Risk analysis
 
-- Data retention policies not established - not part of our project
-- Cannot guarantee perfect code sanitization which can be a risk to our system
-  since it will remotely run their code - very difficult to be able to perfectly
-  link and filter for every single error
+- Data retention policies are not strict. Currently no plans to establish a
+  quota or maximum request policy either.
+
+- Cannot guarantee perfect code sandboxing or sanitization which can be a risk
+  to our server since third party linters or auditing tools may run the user
+  uploaded code, producing a remote code execution vulnerability.
+
+- Cannot provide any guarantees that our program is operation correctly on the
+  content due to the dependencies of third party programs.
+
+- Our program may not be applicable to some researchers who are restricted by
+  privacy or data protection laws that restrict the distribution of their work.
+  This is in part because or server may be hosted via a cloud provider such as
+  Heroku and be subject to their data privacy laws or the country which the
+  infrastructure resides. Furthermore, our server relies on third party tools
+  which may operate by uploading the content to yet another service or cloud
+  platform.
+
+  These concerns must be displayed to the user at start up with a request for
+  their understanding and consent to continue.
 
 ### More ideas 
 
