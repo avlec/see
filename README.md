@@ -183,6 +183,33 @@ Live versions:
 https://drive.google.com/file/d/1B-CMzSXRfYptWzY1d_dPxAJR8aMtiR5r/view?usp=sharing
 https://drive.google.com/file/d/1m72DH4H_mo4rEBOsiaDgeiwHcV9pyOK2/view?usp=sharing
 
+### Progress on 3 tier Architecture
+
+
+
+---
+
+## Iteration 4
+
+### Issue Log
+
+1. Issue 1
+- Date
+- Issue
+- Resolution
+2. Issue 2
+- Date
+- Issue
+- Resolution
+
+### Further Risk Analysis
+
+
+
+### Meeting Minutes
+
+1. Final Weeks Meeting 1 (Date, Agenda, Highlight)
+- Discussion points [Action points]
 
 ---
 
