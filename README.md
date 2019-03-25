@@ -185,6 +185,14 @@ https://drive.google.com/file/d/1m72DH4H_mo4rEBOsiaDgeiwHcV9pyOK2/view?usp=shari
 
 ### Progress on 3 tier Architecture
 
+- UI
+    -
+
+- Logic
+    -
+
+- Data
+    -
 
 
 ---
@@ -194,22 +202,22 @@ https://drive.google.com/file/d/1m72DH4H_mo4rEBOsiaDgeiwHcV9pyOK2/view?usp=shari
 ### Issue Log
 
 1. Issue 1
-- Date
-- Issue
-- Resolution
+    - Date
+    - Issue
+    - Resolution
 2. Issue 2
-- Date
-- Issue
-- Resolution
+    - Date
+    - Issue
+    - Resolution
 
 ### Further Risk Analysis
 
-
+- Risk : Risk Mitigation
 
 ### Meeting Minutes
 
 1. Final Weeks Meeting 1 (Date, Agenda, Highlight)
-- Discussion points [Action points]
+    - Discussion points [Action points]
 
 ---
 
