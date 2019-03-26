@@ -2,11 +2,11 @@
 
 SEE is a web based examination tool to take a provided set of Python scripts and
 review them for linting, formatting, inconsistencies, security vulnerabilties,
-and other tests. Changes are suggested and recommended to have the code better
-follow known best practices.
+and other tests. Changes are suggested and recommended to have the users code
+better follow best practices.
 
-SEE attempts to teach users how to write better, more maintainable code, and
-leave them with skills they can use in all of their projects.
+SEE aims to teach users how to write better, more maintainable code, and leave
+them with skills and knowledge they can use in all of their projects.
 
 ## Features
 
@@ -31,8 +31,12 @@ have been established and discussed.
 
 ### UI
 
-Our server deploys a single page application (SPA) written with the React
-framework to a browser. Our interface consists of 4 main components:
+Our server deploys a webpage application written with the React javascript
+framework. The React framework allows for us to create a dynamic UI for users
+to interact with.
+
+#### UI Components:
+These are the main components/features that the UI offers to the user.
 
   - Ace text editor (https://github.com/securingsincity/react-ace)
   - Drag and drop file upload
@@ -41,7 +45,9 @@ framework to a browser. Our interface consists of 4 main components:
   - Bottom panel
     - List of recommendations and issues reported in the uploaded codebase
 
-Here is a mockup of the proposed UI:
+#### UI Mockup
+This is the first medium fidelity mockup of the UI. It is currently a static
+image, progress is being made towards a high-fidelity prototype.
 
 ![UI](docs/SEE-Rough-UI.png?raw=true "SEE code insertions example")
 
@@ -108,6 +114,7 @@ The project task list is also documented in our RACI chart.
   - Common SQL mistakes
 - [x] Research existing web application solutions:
   - Similar: `pep8online` https://github.com/Bryukh/pep8online
+- [x] Develop a Medium-Fidelity UI
 
 ### In progress
 
@@ -120,6 +127,7 @@ The project task list is also documented in our RACI chart.
   - Modals
   - Ace editor (https://github.com/securingsincity/react-ace)
   - Drag and drop files
+- [ ] Develop a High-Fidelity UI
 
 ### Future
 
@@ -130,6 +138,12 @@ The project task list is also documented in our RACI chart.
     license file" Then recommends a basic template for the license file
   - Another example: "Looks like you don't have a readme, you should make one
     and tell people about your project"
+- [ ] Complex analysis of source files.
+  - Ability to determine which dependencies a source file may have.
+  - Ability to analyze how the provided source files interact. This would allow
+  us to show codebase complexity and help the user remedy this with suggestions
+  for how to make it better.
+  - Recognize design patterns and anti-patterns.
 
 ---
 
