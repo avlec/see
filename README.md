@@ -199,14 +199,21 @@ https://drive.google.com/file/d/1m72DH4H_mo4rEBOsiaDgeiwHcV9pyOK2/view?usp=shari
 
 ### Progress on 3 tier Architecture
 
+More work is being done 
+
 - UI
-    -
+    - Creating rough ideas for some user interaction dialogue. (future implimentation)
+    - Creating views that are associated with different use cases.
+    - Integrating feedback on original UI prototype.
+    - Progress being made towards high-fidelity prototype.
 
 - Logic
-    -
+    - Not much changed here. Ideas are pretty static as the scope of the project is fairly narrow.
+    - Implimenting REST server to start testing the filters.
+    - Filter development in progress, some filters completed.
 
 - Data
-    -
+    - Most of the data is user provided, and it's files.
 
 
 ---
