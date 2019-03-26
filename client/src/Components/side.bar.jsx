@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class SideBar extends Component {
   state = {};
   render() {
-    return <React.Fragment>This is the side bar!!!</React.Fragment>;
+    return <React.Fragment>Upload your files here!!!</React.Fragment>;
   }
 }
 

@@ -9,12 +9,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Container>
+        <Container-fluid>
           <Row>
-            <Col>
+            <Col sm="2" xs="2" md="2">
               <SideBar />
             </Col>
-            <Col>
+            <Col sm="10" xs="10" md="10">
               <Row>
                 <Col>
                   <InputArea />
@@ -27,7 +27,7 @@ class App extends Component {
               </Row>
             </Col>
           </Row>
-        </Container>
+        </Container-fluid>
       </div>
     );
   }
