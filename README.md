@@ -223,13 +223,19 @@ More work is being done
 ### Issue Log
 
 1. Issue 1
-    - Date
-    - Issue
-    - Resolution
+    - March 26th 2019
+    - Issue: Lack of CI tools in devops for project
+    - Resolution: Investigated possible CI tools to add to our Github Repository, Selected Travis CI, Added Travis CI to Github.
 2. Issue 2
-    - Date
-    - Issue
-    - Resolution
+    - March 26th 2019
+    - Issue: Lack of template for final report
+    - Resolution: Todo
+3. Issue 3
+    - March 26th 2019
+    - Issue: I don't know React
+    Reolution: Todo - learn React
+    
+4. 
 
 ### Further Risk Analysis
 
@@ -237,8 +243,9 @@ More work is being done
 
 ### Meeting Minutes
 
-1. Final Weeks Meeting 1 (Date, Agenda, Highlight)
-    - Discussion points [Action points]
+1. Final Weeks Meeting 1 (26th March 2019, Agenda: Figuring out where we at (Juan, Misha, Alec), Highlight: Added CI tools)
+    - We currently lack any CI tools in our pipeline, we haven't transitioned to Gitlab. [We added Travis CI to github (see Issue 1)]
+    - 
 
 ---
 
