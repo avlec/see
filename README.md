@@ -229,11 +229,15 @@ More work is being done
 2. Issue 2
     - March 26th 2019
     - Issue: Lack of template for final report
-    - Resolution: Todo
+    - Resolution: Todo - create the template
 3. Issue 3
     - March 26th 2019
     - Issue: I don't know React
     Reolution: Todo - learn React
+4. Issue 4 
+    - March 26th 2019
+    - Issue: Scope Review Required
+    - Resolution : Todo - have group meeting
     
 4. 
 
@@ -243,9 +247,10 @@ More work is being done
 
 ### Meeting Minutes
 
-1. Final Weeks Meeting 1 (26th March 2019, Agenda: Figuring out where we at (Juan, Misha, Alec), Highlight: Added CI tools)
+1. Final Weeks Meeting 1 (26th March 2019 2:30 - 3:20, Agenda: Figuring out where we at (Juan, Misha, Alec), Highlight: Added CI tools)
     - We currently lack any CI tools in our pipeline, we haven't transitioned to Gitlab. [We added Travis CI to github (see Issue 1)]
-    - 
+    - Fear that our scope has shifted without realizing it. [Need to discuss in a larger group the goal of the project (see Issue 4)]
+    - There's currently a lack of solid group meetings [Also needs to be discussed and figuring out a solid]
 
 ---
 
