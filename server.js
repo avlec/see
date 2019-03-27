@@ -57,7 +57,7 @@ app.use((req, res, next) => {
 
 app.post("/uploadFiles", async (req, res) => {
   console.log("Receiving request from", req.sessionID);
-  if (!("files" in req) || Object.keys(req.files).length === 0) {
+  if (!req.files || Object.keys(req.files).length === 0) {
     return res.status(400).send("No files uploaded");
   }
   const userDir = path.join(uploadRoot, req.sessionID);
@@ -101,17 +101,23 @@ const runExternalFilter = command => {
 // https://github.com/richardgirges/express-fileupload#usage
 const filters = {
   checkFileSize(fileObject) {
-    if (fileObject.size > 100 * 1024) { // 100kb
-      return "Your file very large. Consider refactoring your code";
-    }
+    return fileObject.size > 100 * 1024 // 100kb
+      ? "Your file very large. Consider refactoring your code"
+      : "OK";
   },
-  checkTypeAmbiguity(fileObject) {
+  checkTypeAmbiguity() {
     // TODO: Check extension, then check hashbang at the first line of the file
     // if possible... tell them if it's easy to tell what they have
   },
   runPythonLint(fileObject) {
     const command = `python3 filters/myFilter.py ${fileObject.absPath}`;
-    return runExternalFilter(command);
+    return runExternalFilter(command) || "OK";
+  },
+  async checkLineLength(fileObject) {
+    const read = await fs.readFile(fileObject.absPath, "utf8");
+    return read.split(/\r?\n/u).some(line => line.length > 80)
+      ? "Consider wrapping your lines for readability"
+      : "OK";
   }
 };
 
@@ -128,7 +134,7 @@ app.get("/runFileFilter/:filter/:filename", async (req, res) => {
     // from disk since session has them in memory. Disk is kinda for debugging
     // and perminence only
     const output = await filters[filter](req.session.files[filename]);
-    return res.send(output);
+    return res.send(`${filter}: ${output}`);
   } catch (err) {
     return res.status(500).send(
       `Filter ${filter} didn't complete for ${filename}: ${err}`);
