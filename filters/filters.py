@@ -8,10 +8,10 @@ class FilterBase:
             self.inputfile = open(filename)
         except FileNotFoundError:
             self.inputfile = None
-            print("ERR: file found.")
+            print("ERR: file found.", file=sys.stderr)
         except TypeError:
             self.inputfile = None
-            print("ERR: No file specified.")
+            print("ERR: No file specified.", file=sys.stderr)
     def generate_warn(self):
         return { 'warning' : 'No defined behaviour.'}
 
@@ -69,13 +69,13 @@ class FilterAgregator:
                 print("LOG: Adding filter {0}".format(filter[1]))
                 self.filters.append(tuple(reversed(filter)))
             else:
-                print("ERR: filter agregator, type isn't instance of FilterBase")
+                print("ERR: filter agregator, type isn't instance of FilterBase", file=sys.stderr)
         else:
             # Is this a derived filter?
             if isinstance(filter, FilterBase):
                 self.filters.append((filter.__class__.__name__, filter))
             else:
-                print("ERR: filter agregator, type isn't instance of FilterBase")
+                print("ERR: filter agregator, type isn't instance of FilterBase", file=sys.stderr)
 
     def get_results(self):
         return self.filter_results

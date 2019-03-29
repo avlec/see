@@ -110,7 +110,7 @@ const filters = {
     // if possible... tell them if it's easy to tell what they have
   },
   runPythonLint(fileObject) {
-    const command = `python3 filters/myFilter.py ${fileObject.absPath}`;
+    const command = `./filters/filters.py ${fileObject.absPath}`;
     return runExternalFilter(command) || "OK";
   },
   async checkLineLength(fileObject) {
