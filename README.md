@@ -219,7 +219,9 @@ More work is being done
 
 ## Iteration 4
 
-### Issue Log
+### Risk Analysis, Issue Log, and Meeting Minutes
+
+See the sheets link below.
 
 1. Issue 1
     - March 26th 2019
@@ -242,31 +244,6 @@ More work is being done
     - Issue : 
     - Roslution : 
 
-### Further Risk Analysis
-1. Risk 1
-    - Risk Description: 
-    - Mitigation: 
-
-2. Risk 2
-    - Risk Description: 
-    - Mitigation: 
-
-
-### Meeting Minutes
-
-1. Final Weeks Meeting 1 (26th March 2019 2:30 - 3:20, Agenda: Figuring out where we at (Juan, Misha, Alec), Highlight: Added CI tools)
-    - We currently lack any CI tools in our pipeline, we haven't transitioned to Gitlab. [We added Travis CI to github (see Issue 1)]
-    - Fear that our scope has shifted without realizing it. [Need to discuss in a larger group the goal of the project (see Issue 4)]
-    - There's currently a lack of solid group meetings [Also needs to be discussed and figuring out a solid]
-
-1. Meeting 1
-    - March 26, 2019
-    - Venue: 
-    - Agenda: 
-    - Highlight:
-    - Action Points: 
-        1. 
-        2. 
 ---
 
 ## Versioning
