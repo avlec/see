@@ -33,11 +33,10 @@ class LineCountFilter(FilterBase):
         }
 
 class FilterAgregator:
-	"""
-	Each filter is stored as (str, filter)
-	"""
+    """
+    Each filter is stored as (str, filter)
+    """
     filters = []
-
     filter_results = {}
 
     """
@@ -53,7 +52,7 @@ class FilterAgregator:
         # If list, process each item in the list.
         if isinstance(filters, list):
             for filter in filters:
-				self.add_filter(filter)
+                self.add_filter(filter)
         # If not a list, is tuple or is just a filter?
         else:
             self.add_filter(filters)
@@ -61,22 +60,22 @@ class FilterAgregator:
     def add_filter(self, filter):
         # Is this a tuple of class/date or just a class?
         if isinstance(filter, tuple):
-			# Determine which is the filter and which is the string
-			#	if there isn't a filter string combo error.
-			if isinstance(filter[1], FilterBase) and isinstance(filter[0], str):
-				print("LOG: Adding filter {0}".format(filter[0]))
-				self.filters.append(filter)
-			elif isinstance(filter[0], FilterBase) and isinstance(filter[1], str):
-				print("LOG: Adding filter {0}".format(filter[1]))
-				self.filters.append(tuple(reversed(filter)))
-			else:
-			    print("ERR: filter agregator, type isn't instance of FilterBase")
-        else:
-			# Is this a derived filter?
-            if isinstance(filter, FilterBase):
-				self.filters.append((filter.__class__.__name__, filter))
+            # Determine which is the filter and which is the string
+            #	if there isn't a filter string combo error.
+            if isinstance(filter[1], FilterBase) and isinstance(filter[0], str):
+                print("LOG: Adding filter {0}".format(filter[0]))
+                self.filters.append(filter)
+            elif isinstance(filter[0], FilterBase) and isinstance(filter[1], str):
+                print("LOG: Adding filter {0}".format(filter[1]))
+                self.filters.append(tuple(reversed(filter)))
             else:
-				print("ERR: filter agregator, type isn't instance of FilterBase")
+                print("ERR: filter agregator, type isn't instance of FilterBase")
+        else:
+            # Is this a derived filter?
+            if isinstance(filter, FilterBase):
+                self.filters.append((filter.__class__.__name__, filter))
+            else:
+                print("ERR: filter agregator, type isn't instance of FilterBase")
 
     def get_results(self):
         return self.filter_results

@@ -215,7 +215,6 @@ More work is being done
 - Data
     - Most of the data is user provided, and it's files.
 
-
 ---
 
 ## Iteration 4
@@ -237,13 +236,21 @@ More work is being done
 4. Issue 4 
     - March 26th 2019
     - Issue: Scope Review Required
-    - Resolution : Todo - have group meeting
-    
-4. 
+    - Resolution : Todo - have group meeting 
+5. Issue 5
+    - March 29 2019
+    - Issue : 
+    - Roslution : 
 
 ### Further Risk Analysis
+1. Risk 1
+    - Risk Description: 
+    - Mitigation: 
 
-- Risk : Risk Mitigation
+2. Risk 2
+    - Risk Description: 
+    - Mitigation: 
+
 
 ### Meeting Minutes
 
@@ -252,6 +259,14 @@ More work is being done
     - Fear that our scope has shifted without realizing it. [Need to discuss in a larger group the goal of the project (see Issue 4)]
     - There's currently a lack of solid group meetings [Also needs to be discussed and figuring out a solid]
 
+1. Meeting 1
+    - March 26, 2019
+    - Venue: 
+    - Agenda: 
+    - Highlight:
+    - Action Points: 
+        1. 
+        2. 
 ---
 
 ## Versioning
