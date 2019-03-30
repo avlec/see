@@ -4,18 +4,15 @@ import AceEditor from 'react-ace';
 import 'brace/mode/python';
 import 'brace/theme/monokai';
 
+
 class InputArea extends Component {
-  state = {};
 
   constructor(props, context) {
     super(props, context);
-
     this.onChange = this.onChange.bind(this);
   }
 
-  onChange(newValue) {
-    console.log('change', newValue);
-  }
+  onChange = this.props.onChange;
 
   render() {
     return (

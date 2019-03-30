@@ -6,6 +6,20 @@ import BottomBar from "./Components/bottom.bar";
 import "./App.css";
 
 class App extends Component {
+
+  state = { text: "" };
+
+  onTextChange = (newText) => {
+    this.state.text = newText;
+    //console.log(this.state.text);
+  }
+
+  checkText = () => {
+    console.log("checking text...\n");
+    console.log(this.state.text);
+  }
+
+
   render() {
     return (
       <div className="App">
@@ -17,12 +31,16 @@ class App extends Component {
             <Col sm="10" xs="10" md="10">
               <Row>
                 <Col>
-                  <InputArea />
+                  <InputArea
+                    onChange={this.onTextChange}
+                  />
                 </Col>
               </Row>
               <Row>
                 <Col>
-                  <BottomBar />
+                  <BottomBar
+                    checkText={this.checkText}
+                  />
                 </Col>
               </Row>
             </Col>
