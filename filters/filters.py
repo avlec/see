@@ -32,6 +32,24 @@ class LineCountFilter(FilterBase):
             'warning': counter > 250
         }
 
+class CheckIfContainsPassword(FilterBase):
+    inputfile = None
+    def __init__(self, filename):
+        FilterBase.__init__(self, filename)
+
+    def generate_warn(self):
+        if self.inputfile == None:
+            return "{}"
+
+        found = False
+        for line in self.inputfile:
+            if re.search("\b{0}\b".format("password"),line):    #if string found is in current line then print it
+                print line
+                found = True
+        return {
+            'result': found,
+            'warning': 'Please make sure you have no passwords stored in file'
+        }
 class FilterAgregator:
     """
     Each filter is stored as (str, filter)
