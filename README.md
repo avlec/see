@@ -8,14 +8,22 @@ better follow best practices.
 SEE aims to teach users how to write better, more maintainable code, and leave
 them with skills and knowledge they can use in all of their projects.
 
-## Features
+## Main Docs
+- Project 2 report: https://docs.google.com/document/d/1XhA_KPn3GKSu7tny57W31G8Ta8A22Qz1k-gpiGhnrAw/edit?usp=sharing
+- RACI chart: https://docs.google.com/spreadsheets/d/1-4burQmP3Kx1A23MB8o8pErcu7556QK_79ZMyWVKicE/edit#gid=0
+- Project 1 reports: 
+  - Requirement Document 0.9: https://docs.google.com/document/d/1Sf7q8Tzf6CpHEHi3JstM1KW_I0hiKc2Uu6jrE4R_M4w/edit?usp=sharing
+  - Migrating to Cloud Infrastructure report: https://docs.google.com/document/d/1KJNXKzyBaDS05pCXP4heZdGrcRsNgqLx4wf5luWYALc/edit?usp=sharing
+
+*See the docs folder for pdf versions.*
+
+## Planned Features
 
   - Automatic code linting and formatting.
   - Execution environment detection.
   - Library use detection.
   - Codebase security audits.
   - Determining Python version automatically.
-  - Determining how technologically literate the users are.
   - File/database caching optimizations, speed hacks.
   - Recomendations for improvements and optimizations to the codebase.
 
@@ -144,15 +152,6 @@ The project task list is also documented in our RACI chart.
   us to show codebase complexity and help the user remedy this with suggestions
   for how to make it better.
   - Recognize design patterns and anti-patterns.
-
----
-
-## RACI chart
-
-A static copy of which was handed over to the TA and discusses our current
-framework planning.
-
-https://docs.google.com/spreadsheets/d/1-4burQmP3Kx1A23MB8o8pErcu7556QK_79ZMyWVKicE/edit#gid=0
 
 ---
 
