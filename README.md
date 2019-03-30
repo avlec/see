@@ -110,7 +110,7 @@ The project task list is also documented in our RACI chart.
 - [x] Create list of core filters to include:
   - Source code length warnings
   - Lint warnings (ex: inconsistent styles)
-  - Inconsistent code language verions (ex: Python 2.7 vs 3.x)
+  - Inconsistent code language versions (ex: Python 2.7 vs 3.x)
   - Common SQL mistakes
 - [x] Research existing web application solutions:
   - Similar: `pep8online` https://github.com/Bryukh/pep8online
@@ -221,34 +221,15 @@ More work is being done
 
 ### Risk Analysis, Issue Log, and Meeting Minutes
 
-See the sheets link below.
+See the google docs link below.
 
-1. Issue 1
-    - March 26th 2019
-    - Issue: Lack of CI tools in devops for project
-    - Resolution: Investigated possible CI tools to add to our Github Repository, Selected Travis CI, Added Travis CI to Github.
-2. Issue 2
-    - March 26th 2019
-    - Issue: Lack of template for final report
-    - Resolution: Todo - create the template
-3. Issue 3
-    - March 26th 2019
-    - Issue: I don't know React
-    Reolution: Todo - learn React
-4. Issue 4 
-    - March 26th 2019
-    - Issue: Scope Review Required
-    - Resolution : Todo - have group meeting 
-5. Issue 5
-    - March 29 2019
-    - Issue : 
-    - Roslution : 
+https://docs.google.com/document/d/1P4HeTJXzBEi-NksxkVwjAlQW8VX8TsjYdYj5pSJUNx4/edit
 
 ---
 
 ## Versioning
 
-Version 2.0
+Version 4.0
 
 ## Authors
 
