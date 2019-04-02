@@ -57,16 +57,19 @@ class CheckIfContainsPassword(FilterBase):
 
         found = False
         for line in self.inputfile:
-            if re.search("\b{0}\b".format("password"),line):    #if string found is in current line then print it
+            #if string found is in current line then print it
+            if re.search("\b{0}\b".format("password"),line):
                 print(line)
                 found = True
         return {
             'result': found,
             'warning': 'Please make sure you have no passwords stored in file'
         }
+
+
 class FilterAgregator:
     """
-    Each filter is stored as (str, filter)
+    Each filter is stored as (string, filter)
     """
     filters = []
     filter_results = {}
@@ -122,11 +125,10 @@ class FilterAgregator:
                 print("LOG: Conflicting filter names. Filter {0} has been skipped.".format(filter[0]))
 
 def main(argv):
-    fltr = LineCountFilter(argv[0])
-    fltrr = FilterBase(argv[0])
+    line_count_fltr = LineCountFilter(argv[0])
+    password_fltr = CheckIfContainsPassword(argv[0])
 
-    # fltrag = FilterAgregator([(fltr.__class__.__name__, fltr)])
-    fltrag = FilterAgregator([fltr, (fltrr, "Base")])
+    fltrag = FilterAgregator([line_count_fltr, (password_fltr, "Password Filter")])
     fltrag.run_filters()
     print(fltrag.get_results())
 
