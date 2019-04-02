@@ -44,7 +44,7 @@ class CheckIfContainsPassword(FilterBase):
         found = False
         for line in self.inputfile:
             if re.search("\b{0}\b".format("password"),line):    #if string found is in current line then print it
-                print line
+                print(line)
                 found = True
         return {
             'result': found,
