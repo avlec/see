@@ -82,7 +82,9 @@ class FilterAgregator:
 
     def run_filters(self):
         for filter in self.filters:
+            # If the filter with the corresponding name hasn't been run
             if self.filter_results.get(filter[0]) == None:
+                # Add the results of the filter to the dictionary
                 self.filter_results[filter[0]] = filter[1].generate_warn()
             else:
                 print("LOG: Conflicting filter names. Filter {0} has been skipped.".format(filter[0]))
