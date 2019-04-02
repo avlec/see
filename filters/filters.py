@@ -3,6 +3,13 @@
 import sys
 
 class FilterBase:
+
+    inputfile = None
+
+    """
+    Most derived classes will just have a good time calling
+    this constructor instead of their own.
+    """
     def __init__(self, filename):
         try:
             self.inputfile = open(filename)
@@ -12,11 +19,16 @@ class FilterBase:
         except TypeError:
             self.inputfile = None
             print("ERR: No file specified.", file=sys.stderr)
+
+    """
+    This function is required to be implemented to get any
+    useful results from the filter.
+    """
     def generate_warn(self):
         return { 'warning' : 'No defined behaviour.'}
 
+
 class LineCountFilter(FilterBase):
-    inputfile = None
     def __init__(self, filename):
         FilterBase.__init__(self, filename)
 
@@ -32,8 +44,10 @@ class LineCountFilter(FilterBase):
             'warning': counter > 250
         }
 
+
+import re
+
 class CheckIfContainsPassword(FilterBase):
-    inputfile = None
     def __init__(self, filename):
         FilterBase.__init__(self, filename)
 
