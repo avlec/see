@@ -14,11 +14,18 @@ class App extends Component {
     //console.log(this.state.text);
   }
 
-  checkText = () => {
+  checkText = async () => {
     console.log("checking text...\n");
     console.log(this.state.text);
+    let route = '/runFileFilter/test/test';
+    const response = await fetch(route, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    console.log(response);
   }
-
 
   render() {
     return (
