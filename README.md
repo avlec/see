@@ -1,7 +1,9 @@
 # Simple Examination Enviroment - SEE
 
+[![Build Status](https://travis-ci.com/avlec/see.svg?branch=master)](https://travis-ci.com/avlec/see)
+
 SEE is a web based examination tool to take a provided set of Python scripts and
-review them for linting, formatting, inconsistencies, security vulnerabilties,
+review them for linting, formatting, inconsistencies, security vulnerabilities,
 and other tests. Changes are suggested and recommended to have the users code
 better follow best practices.
 
@@ -25,12 +27,14 @@ them with skills and knowledge they can use in all of their projects.
   - Codebase security audits.
   - Determining Python version automatically.
   - File/database caching optimizations, speed hacks.
-  - Recomendations for improvements and optimizations to the codebase.
+  - Recommendations for improvements and optimizations to the codebase.
 
 ## Project management
 
 This section provides progress reports on the project by discussing each
-interation of the application.
+iteration of the application.
+
+---
 
 ## Iteration 1
 
@@ -90,7 +94,7 @@ terminated by the user directly or expires after 10 minutes of inactivity from a
 client.
 
 Sessions are started once a user uploads a file. Requests to run a file through
-a filter does not reupload any content - which is the need for a session to
+a filter does not re-upload any content - which is the need for a session to
 provide state between the client and server to reference the same files.
 
 If a user leaves their client idle and lets the server side files be purged due
@@ -102,6 +106,77 @@ A similar process occurs for changes to files; the content must be resent.
 
 The server uses third party linting and code analysis tools which may reach out
 to internet services for further processing. **See risk analysis for details.**
+
+---
+
+## Iteration 2
+
+### Risk analysis
+
+- Data retention policies are not strict. Currently no plans to establish a
+  quota or maximum request policy either.
+
+- Cannot guarantee perfect code sand-boxing or sanitization which can be a risk
+  to our server since third party linters or auditing tools may run the user
+  uploaded code, producing a remote code execution vulnerability.
+
+- Cannot provide any guarantees that our program is operation correctly on the
+  content due to the dependencies of third party programs.
+
+- Our program may not be applicable to some researchers who are restricted by
+  privacy or data protection laws that restrict the distribution of their work.
+  This is in part because or server may be hosted via a cloud provider such as
+  Heroku and be subject to their data privacy laws or the country which the
+  infrastructure resides. Furthermore, our server relies on third party tools
+  which may operate by uploading the content to yet another service or cloud
+  platform.
+
+  These concerns must be displayed to the user at start up with a request for
+  their understanding and consent to continue.
+
+### More ideas 
+
+- Should mention somewhere in application that we are no liable for any damages
+  caused by the program that is linted through out system
+
+---
+
+## Iteration 3
+
+### UML Diagrams
+
+- Created Context level and Data Flow level 1 diagrams
+Live versions: 
+https://drive.google.com/file/d/1B-CMzSXRfYptWzY1d_dPxAJR8aMtiR5r/view?usp=sharing
+https://drive.google.com/file/d/1m72DH4H_mo4rEBOsiaDgeiwHcV9pyOK2/view?usp=sharing
+
+### Progress on 3 tier Architecture
+
+More work is being done 
+
+- UI
+    - Creating rough ideas for some user interaction dialogue. (future implementation)
+    - Creating views that are associated with different use cases.
+    - Integrating feedback on original UI prototype.
+    - Progress being made towards high-fidelity prototype.
+
+- Logic
+    - Not much changed here. Ideas are pretty static as the scope of the project is fairly narrow.
+    - Implementing REST server to start testing the filters.
+    - Filter development in progress, some filters completed.
+
+- Data
+    - Most of the data is user provided, and it's files.
+
+---
+
+## Iteration 4
+
+### Risk Analysis, Issue Log, and Meeting Minutes
+
+See the google docs link below.
+
+https://docs.google.com/document/d/1P4HeTJXzBEi-NksxkVwjAlQW8VX8TsjYdYj5pSJUNx4/edit
 
 ---
 
@@ -155,77 +230,6 @@ The project task list is also documented in our RACI chart.
 
 ---
 
-## Iteration 2
-
-### Risk analysis
-
-- Data retention policies are not strict. Currently no plans to establish a
-  quota or maximum request policy either.
-
-- Cannot guarantee perfect code sandboxing or sanitization which can be a risk
-  to our server since third party linters or auditing tools may run the user
-  uploaded code, producing a remote code execution vulnerability.
-
-- Cannot provide any guarantees that our program is operation correctly on the
-  content due to the dependencies of third party programs.
-
-- Our program may not be applicable to some researchers who are restricted by
-  privacy or data protection laws that restrict the distribution of their work.
-  This is in part because or server may be hosted via a cloud provider such as
-  Heroku and be subject to their data privacy laws or the country which the
-  infrastructure resides. Furthermore, our server relies on third party tools
-  which may operate by uploading the content to yet another service or cloud
-  platform.
-
-  These concerns must be displayed to the user at start up with a request for
-  their understanding and consent to continue.
-
-### More ideas 
-
-- Should mention somewhere in application that we are no liable for any damages
-  caused by the program that is linted through out system
-
----
-
-## Iteration 3
-
-### UML Diagrams
-
-- Created Context level and Data Flow level 1 diagrams
-Live versions: 
-https://drive.google.com/file/d/1B-CMzSXRfYptWzY1d_dPxAJR8aMtiR5r/view?usp=sharing
-https://drive.google.com/file/d/1m72DH4H_mo4rEBOsiaDgeiwHcV9pyOK2/view?usp=sharing
-
-### Progress on 3 tier Architecture
-
-More work is being done 
-
-- UI
-    - Creating rough ideas for some user interaction dialogue. (future implimentation)
-    - Creating views that are associated with different use cases.
-    - Integrating feedback on original UI prototype.
-    - Progress being made towards high-fidelity prototype.
-
-- Logic
-    - Not much changed here. Ideas are pretty static as the scope of the project is fairly narrow.
-    - Implimenting REST server to start testing the filters.
-    - Filter development in progress, some filters completed.
-
-- Data
-    - Most of the data is user provided, and it's files.
-
----
-
-## Iteration 4
-
-### Risk Analysis, Issue Log, and Meeting Minutes
-
-See the google docs link below.
-
-https://docs.google.com/document/d/1P4HeTJXzBEi-NksxkVwjAlQW8VX8TsjYdYj5pSJUNx4/edit
-
----
-
 ## Versioning
 
 Version 4.0
@@ -241,9 +245,7 @@ Devlyn Dorfer - V00846516
 
 ## Acknowledgments
 
-- Yvonne's enthusiasm for keeping us engaged
-
-- Bing Gao's help on Compute Canada's code and creating Docker containers
-
-- Will from Urthecast for providing a better understanding earth observational
+* Yvonne's enthusiasm for keeping us engaged
+* Bing Gao's help on Compute Canada's code and creating Docker containers
+* Will from Urthecast for providing a better understanding earth observational
   data and the applications of this project

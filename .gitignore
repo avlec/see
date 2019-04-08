@@ -1,3 +1,5 @@
 node_modules
 build
 *.swp
+package-lock.json
+client/package-lock.json
