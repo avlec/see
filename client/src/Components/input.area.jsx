@@ -16,18 +16,17 @@ class InputArea extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <AceEditor
-          mode="python"
-          width="100%"
-          theme="monokai"
-          onChange={this.onChange}
-          name="UNIQUE_ID_OF_DIV"
-          editorProps={{
-            $blockScrolling: true
-          }}
-        />
-      </React.Fragment>
+      <AceEditor
+        mode="python"
+        width="100%"
+        theme="monokai"
+        onChange={this.onChange}
+        value={this.props.textVal}
+        name="UNIQUE_ID_OF_DIV"
+        editorProps={{
+          $blockScrolling: true
+        }}
+      />
     );
   }
 }
