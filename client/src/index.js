@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
+import ReactDropzone from "react-dropzone";
 import "./index.css";
 
 import Editor from "./components/editor";
@@ -9,11 +10,17 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      // Current file name
       current: "",
+      // Text for bottom bar
       issueText: "",
-      filenames: []
+      // Sidebar items
+      filenames: [],
+      // Content of the editor
+      text: ""
     };
     this.runFilter = this.runFilter.bind(this);
+    this.onDrop = this.onDrop.bind(this);
   };
 
   async runFilter() {
@@ -23,7 +30,28 @@ class App extends Component {
     this.setState({
       issueText: JSON.stringify(text, null, 2),
     });
-  };
+  }
+
+  async onDrop(files) {
+    let route = '/uploadFiles';
+    const data = new FormData();
+    data.append('files', files[0]);
+
+    const response = await fetch(route, {
+      method: "POST",
+      body: data,
+    });
+    console.log(response);
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      console.log(this.state.text);
+      this.setState({ text: event.target.result });
+      console.log(this.state.text);
+    };
+
+    reader.readAsText(files[0]);
+  }
 
   render() {
     const { current } = this.state;
@@ -39,15 +67,28 @@ class App extends Component {
           }
         </header>
         <section id='sidebar'>
-          Upload your files here
-          <br/>
-          {this.state.filenames.length > 0
-            ? <ul>{this.state.filenames.map(name => <li>${name}</li>)}</ul>
-            : "No files"
-          }
+          <ReactDropzone onDrop={this.onDrop}>
+          {({ getRootProps, getInputProps }) => (
+            <section>
+              <div {...getRootProps()}>
+                <input {...getInputProps()} />
+                <p>Upload your files here</p>
+                {this.state.filenames.length > 0
+                  ? <ul>{this.state.filenames.map(name =>
+                      <li>${name}</li>
+                    )}</ul>
+                  : "No files"
+                }
+              </div>
+            </section>
+          )}
+          </ReactDropzone>
         </section>
         <main>
-          <Editor/>
+          <Editor
+            onChange={(newText) => this.setState({ text: newText || "" })}
+            textVal={this.state.text}
+          />
           <BottomBar
             onClickFunction={this.runFilter}
             text={this.state.issueText}

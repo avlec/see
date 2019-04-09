@@ -10,8 +10,9 @@ class Editor extends Component {
         name="editor"
         mode="python"
         width="100%"
+        value={this.props.textVal}
+        onChange={this.props.onChange}
         theme="monokai"
-        value="HeyHeyHello:)"
         editorProps={{
           $blockScrolling: true
         }}
