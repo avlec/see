@@ -46,7 +46,11 @@ class App extends Component {
     const reader = new FileReader();
     reader.onload = (event) => {
       console.log(this.state.text);
-      this.setState({ text: event.target.result });
+      this.setState(prev => ({
+        filenames: [...prev.filenames, files[0].name],
+        current: files[0].name,
+        text: event.target.result
+      }));
       console.log(this.state.text);
     };
 
