@@ -211,6 +211,7 @@ The project task list is also documented in our RACI chart.
   - Ace editor (https://github.com/securingsincity/react-ace)
   - Drag and drop files
 - [ ] Develop a High-Fidelity UI
+- [ ] docs folder for pdf versions of all docs.
 
 ### Future
 
@@ -232,7 +233,7 @@ The project task list is also documented in our RACI chart.
 
 ## Versioning
 
-Version 4.0
+Version 5.0
 
 ## Authors
 

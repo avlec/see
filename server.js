@@ -105,6 +105,20 @@ const filters = {
       ? "Your file very large. Consider refactoring your code"
       : "OK";
   },
+  async checkLineCount(fileObject) {
+    // console.log(fileObject)
+    const read = await fs.readFile(fileObject.absPath, "utf8");
+    return read.split(/\r?\n/u).length > 2000
+      ? "Your file has many lines. Consider refactoring your code"
+      : "OK";
+  },
+  async checkContainsPassword(fileObject) {
+    // console.log(fileObject)
+    const read = await fs.readFile(fileObject.absPath, "utf8");
+    return read.split(/\r?\n/u).some(line => line.toLowerCase().includes("password"))
+      ? "Please make sure you have no passwords stored in file"
+      : "OK";
+  },
   checkTypeAmbiguity() {
     // TODO: Check extension, then check hashbang at the first line of the file
     // if possible... tell them if it's easy to tell what they have
@@ -150,7 +164,7 @@ app.get("/runDirectoryFilter/:filter/:directory", (req, res) => {
   return res.status(501).send("Not implemented");
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(new Date().toLocaleString());
   console.log(`Listening on ${port}\n`);
