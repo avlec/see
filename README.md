@@ -1,7 +1,9 @@
 # Simple Examination Enviroment - SEE
 
+[![Build Status](https://travis-ci.com/avlec/see.svg?branch=master)](https://travis-ci.com/avlec/see)
+
 SEE is a web based examination tool to take a provided set of Python scripts and
-review them for linting, formatting, inconsistencies, security vulnerabilties,
+review them for linting, formatting, inconsistencies, security vulnerabilities,
 and other tests. Changes are suggested and recommended to have the users code
 better follow best practices.
 
@@ -25,12 +27,14 @@ them with skills and knowledge they can use in all of their projects.
   - Codebase security audits.
   - Determining Python version automatically.
   - File/database caching optimizations, speed hacks.
-  - Recomendations for improvements and optimizations to the codebase.
+  - Recommendations for improvements and optimizations to the codebase.
 
 ## Project management
 
 This section provides progress reports on the project by discussing each
-interation of the application.
+iteration of the application.
+
+---
 
 ## Iteration 1
 
@@ -90,7 +94,7 @@ terminated by the user directly or expires after 10 minutes of inactivity from a
 client.
 
 Sessions are started once a user uploads a file. Requests to run a file through
-a filter does not reupload any content - which is the need for a session to
+a filter does not re-upload any content - which is the need for a session to
 provide state between the client and server to reference the same files.
 
 If a user leaves their client idle and lets the server side files be purged due
@@ -105,56 +109,6 @@ to internet services for further processing. **See risk analysis for details.**
 
 ---
 
-## Task list
-
-The project task list is also documented in our RACI chart.
-
-### Complete
-
-- [x] Create repository and setup CI tools
-- [x] Research client side frameworks
-- [x] Research server side frameworks
-- [x] Create simple blueprints for proposed system
-- [x] Create list of core filters to include:
-  - Source code length warnings
-  - Lint warnings (ex: inconsistent styles)
-  - Inconsistent code language versions (ex: Python 2.7 vs 3.x)
-  - Common SQL mistakes
-- [x] Research existing web application solutions:
-  - Similar: `pep8online` https://github.com/Bryukh/pep8online
-- [x] Develop a Medium-Fidelity UI
-
-### In progress
-
-- [ ] Research Python tools used in the community
-- [ ] Explore Python community for tacit knowledge
-- [ ] Study Gitlab CI/CD for Python
-- [ ] Setup React components for:
-  - Directory tree
-  - Sidebar
-  - Modals
-  - Ace editor (https://github.com/securingsincity/react-ace)
-  - Drag and drop files
-- [ ] Develop a High-Fidelity UI
-
-### Future
-
-- [ ] Make a boolean question flowchart tree. Examples:
-  - No requirements.txt or similar -> "Does your project use any dependencies?"
-    If yes, recommend a req.txt...
-  - Look for license file -> "Is your project licensed? There's no apparent
-    license file" Then recommends a basic template for the license file
-  - Another example: "Looks like you don't have a readme, you should make one
-    and tell people about your project"
-- [ ] Complex analysis of source files.
-  - Ability to determine which dependencies a source file may have.
-  - Ability to analyze how the provided source files interact. This would allow
-  us to show codebase complexity and help the user remedy this with suggestions
-  for how to make it better.
-  - Recognize design patterns and anti-patterns.
-
----
-
 ## Iteration 2
 
 ### Risk analysis
@@ -162,7 +116,7 @@ The project task list is also documented in our RACI chart.
 - Data retention policies are not strict. Currently no plans to establish a
   quota or maximum request policy either.
 
-- Cannot guarantee perfect code sandboxing or sanitization which can be a risk
+- Cannot guarantee perfect code sand-boxing or sanitization which can be a risk
   to our server since third party linters or auditing tools may run the user
   uploaded code, producing a remote code execution vulnerability.
 
@@ -201,14 +155,14 @@ https://drive.google.com/file/d/1m72DH4H_mo4rEBOsiaDgeiwHcV9pyOK2/view?usp=shari
 More work is being done 
 
 - UI
-    - Creating rough ideas for some user interaction dialogue. (future implimentation)
+    - Creating rough ideas for some user interaction dialogue. (future implementation)
     - Creating views that are associated with different use cases.
     - Integrating feedback on original UI prototype.
     - Progress being made towards high-fidelity prototype.
 
 - Logic
     - Not much changed here. Ideas are pretty static as the scope of the project is fairly narrow.
-    - Implimenting REST server to start testing the filters.
+    - Implementing REST server to start testing the filters.
     - Filter development in progress, some filters completed.
 
 - Data
@@ -226,9 +180,60 @@ https://docs.google.com/document/d/1P4HeTJXzBEi-NksxkVwjAlQW8VX8TsjYdYj5pSJUNx4/
 
 ---
 
+## Task list
+
+The project task list is also documented in our RACI chart.
+
+### Complete
+
+- [x] Create repository and setup CI tools
+- [x] Research client side frameworks
+- [x] Research server side frameworks
+- [x] Create simple blueprints for proposed system
+- [x] Create list of core filters to include:
+  - Source code length warnings
+  - Lint warnings (ex: inconsistent styles)
+  - Inconsistent code language versions (ex: Python 2.7 vs 3.x)
+  - Common SQL mistakes
+- [x] Research existing web application solutions:
+  - Similar: `pep8online` https://github.com/Bryukh/pep8online
+- [x] Develop a Medium-Fidelity UI
+
+### In progress
+
+- [ ] Research Python tools used in the community
+- [ ] Explore Python community for tacit knowledge
+- [ ] Study Gitlab CI/CD for Python
+- [ ] Setup React components for:
+  - Directory tree
+  - Sidebar
+  - Modals
+  - Ace editor (https://github.com/securingsincity/react-ace)
+  - Drag and drop files
+- [ ] Develop a High-Fidelity UI
+- [ ] docs folder for pdf versions of all docs.
+
+### Future
+
+- [ ] Make a boolean question flowchart tree. Examples:
+  - No requirements.txt or similar -> "Does your project use any dependencies?"
+    If yes, recommend a req.txt...
+  - Look for license file -> "Is your project licensed? There's no apparent
+    license file" Then recommends a basic template for the license file
+  - Another example: "Looks like you don't have a readme, you should make one
+    and tell people about your project"
+- [ ] Complex analysis of source files.
+  - Ability to determine which dependencies a source file may have.
+  - Ability to analyze how the provided source files interact. This would allow
+  us to show codebase complexity and help the user remedy this with suggestions
+  for how to make it better.
+  - Recognize design patterns and anti-patterns.
+
+---
+
 ## Versioning
 
-Version 4.0
+Version 5.0
 
 ## Authors
 
@@ -241,9 +246,7 @@ Devlyn Dorfer - V00846516
 
 ## Acknowledgments
 
-- Yvonne's enthusiasm for keeping us engaged
-
-- Bing Gao's help on Compute Canada's code and creating Docker containers
-
-- Will from Urthecast for providing a better understanding earth observational
+* Yvonne's enthusiasm for keeping us engaged
+* Bing Gao's help on Compute Canada's code and creating Docker containers
+* Will from Urthecast for providing a better understanding earth observational
   data and the applications of this project
