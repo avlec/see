@@ -15,7 +15,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"No existing tests.\"",
-    "build": "echo \"No existing tests.\""
+    "build": "echo \"No existing builds.\""
   },
   "keywords": [],
   "author": "",
