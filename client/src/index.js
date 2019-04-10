@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import ReactDropzone from "react-dropzone";
 import "./index.css";
 
-import Editor from "./components/editor";
-import BottomBar from "./components/bottombar";
+import Editor from "./Components/editor";
+import BottomBar from "./Components/bottombar";
 
 class App extends Component {
   constructor(props) {
@@ -72,20 +72,20 @@ class App extends Component {
         </header>
         <section id='sidebar'>
           <ReactDropzone onDrop={this.onDrop}>
-          {({ getRootProps, getInputProps }) => (
-            <section>
-              <div {...getRootProps()}>
-                <input {...getInputProps()} />
-                <p>Upload your files here</p>
-                {this.state.filenames.length > 0
-                  ? <ul>{this.state.filenames.map(name =>
+            {({ getRootProps, getInputProps }) => (
+              <section>
+                <div {...getRootProps()}>
+                  <input {...getInputProps()} />
+                  <p>Upload your files here</p>
+                  {this.state.filenames.length > 0
+                    ? <ul>{this.state.filenames.map(name =>
                       <li>${name}</li>
                     )}</ul>
-                  : "No files"
-                }
-              </div>
-            </section>
-          )}
+                    : "No files"
+                  }
+                </div>
+              </section>
+            )}
           </ReactDropzone>
         </section>
         <main>
