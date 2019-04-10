@@ -4,8 +4,8 @@
   "private": true,
   "homepage": "https://avlec.github.io/see",
   "dependencies": {
-    "gh-pages": "^2.0.1",
     "bootstrap": "^4.3.1",
+    "gh-pages": "^2.0.1",
     "react": "^16.8.4",
     "react-ace": "^6.4.0",
     "react-dom": "^16.8.4",

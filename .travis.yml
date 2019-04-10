@@ -5,6 +5,9 @@ cache:
   directories:
     - "node_modules"
 script:
+  - npm install -g create-react-app
   - npm test
   - npm run build
-  - cd client && npm run build
+  - cd client && npm install --save gh-pages
+  - npm run build
+  - npm run deploy
