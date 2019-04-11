@@ -17,18 +17,23 @@ class App extends Component {
       // Sidebar items
       filenames: [],
       // Content of the editor
-      text: ""
+      text: "",
+
+      filters: ["checkLineCount", "checkFileSize", "checkContainsPassword", "runPythonLint", "checkLineLength"],
+
+      currentFilter: "checkLineCount"
     };
     this.runFilter = this.runFilter.bind(this);
     this.onDrop = this.onDrop.bind(this);
   };
 
   async runFilter() {
-    const route = `/runFileFilter/${this.state.current}/someFilter`;
+    const route = `/runFileFilters/${this.state.current}`;
     const data = await fetch(route);
-    const text = data.json();
+    const text = await data.text();
+    console.log(text);
     this.setState({
-      issueText: JSON.stringify(text, null, 2),
+      issueText: text,
     });
   }
 
