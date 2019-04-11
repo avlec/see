@@ -19,14 +19,11 @@ them with skills and knowledge they can use in all of their projects.
 
 *See the docs folder for pdf versions.*
 
-## Planned Features
+## Features
 
   - Automatic code linting and formatting.
-  - Execution environment detection.
-  - Library use detection.
-  - Codebase security audits.
-  - Determining Python version automatically.
-  - File/database caching optimizations, speed hacks.
+  - Codebase security audits
+  - Warnings for code quality, poor practices, or concerns of security
   - Recommendations for improvements and optimizations to the codebase.
 
 ## Project management
@@ -198,20 +195,20 @@ The project task list is also documented in our RACI chart.
 - [x] Research existing web application solutions:
   - Similar: `pep8online` https://github.com/Bryukh/pep8online
 - [x] Develop a Medium-Fidelity UI
-
-### In progress
-
-- [ ] Research Python tools used in the community
-- [ ] Explore Python community for tacit knowledge
-- [ ] Study Gitlab CI/CD for Python
-- [ ] Setup React components for:
+- [x] Research Python tools used in the community
+- [x] Explore Python community for tacit knowledge
+- [x] Setup React components for:
   - Directory tree
   - Sidebar
   - Modals
   - Ace editor (https://github.com/securingsincity/react-ace)
   - Drag and drop files
-- [ ] Develop a High-Fidelity UI
-- [ ] docs folder for pdf versions of all docs.
+- [x] Develop a High-Fidelity UI
+- [x] docs folder for pdf versions of all docs.
+
+### In progress
+
+- None
 
 ### Future
 
@@ -227,7 +224,14 @@ The project task list is also documented in our RACI chart.
   - Ability to analyze how the provided source files interact. This would allow
   us to show codebase complexity and help the user remedy this with suggestions
   for how to make it better.
+- [ ] Study Gitlab CI/CD for Python
+- [ ] Add more filters including:
   - Recognize design patterns and anti-patterns.
+  - Execution environment detection.
+  - Library use detection.
+  - Codebase security audits.
+  - Determining Python version automatically.
+  - File/database caching optimizations, speed hacks.
 
 ---
 
