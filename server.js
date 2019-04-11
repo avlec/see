@@ -34,8 +34,8 @@ app.use(session({
 // Note a future/production implementation would use global quotas
 const uploadRoot = path.resolve(__dirname, "see-uploads");
 app.use(fileUpload({
-  useTempFiles : true,
-  tempFileDir : uploadRoot,
+  useTempFiles: true,
+  tempFileDir: uploadRoot,
   limits: { fileSize: 50 * 1024 * 1024 }
 }));
 
@@ -88,7 +88,7 @@ app.post("/uploadFiles", async (req, res) => {
 // For filters that aren't in JS
 // runExternalFilter(`java -cp bin:algs4.jar -ea MyFilter ${pathOnDisk}`)
 const runExternalFilter = command => {
-  const [ binary, ...args ] = command.split(" ");
+  const [binary, ...args] = command.split(" ");
   const { stdout, stderr } = spawnSync(binary, args, {
     stdio: ["ignore", "pipe", "pipe"], // In, Out, Err
     encoding: "utf8"
@@ -135,8 +135,9 @@ const filters = {
   }
 };
 
-app.get("/runFileFilter/:filter/:filename", async (req, res) => {
+app.get("/runFileFilter/:filename/:filter", async (req, res) => {
   const { filter, filename } = req.params;
+  console.log(filter);
   if (!(filter in filters)) {
     return res.status(404).send(`Filter ${filter} is unknown`);
   }
@@ -152,6 +153,29 @@ app.get("/runFileFilter/:filter/:filename", async (req, res) => {
   } catch (err) {
     return res.status(500).send(
       `Filter ${filter} didn't complete for ${filename}: ${err}`);
+  }
+});
+
+app.get("/runFileFilters/:filename", async (req, res) => {
+  const { filename } = req.params;
+  console.log(filename);
+  if (!(filename in req.session.files)) {
+    return res.status(404).send(`You haven't uploaded the file "${filename}"`);
+  }
+  try {
+    // Use `await` because a filter could take a while. Don't bother reading
+    // from disk since session has them in memory. Disk is kinda for debugging
+    // and perminence only
+
+    const output1 = await filters["checkFileSize"](req.session.files[filename])
+    const output2 = await filters["checkLineCount"](req.session.files[filename])
+    const output3 = await filters["checkContainsPassword"](req.session.files[filename])
+    const output4 = await filters["checkLineLength"](req.session.files[filename])
+    const output5 = await filters["runPythonLint"](req.session.files[filename])
+    return res.send(`FileSize: ${output1}\nLineCount: ${output2}\nContainsPassword: ${output3}\nLineLength: ${output4}\nPythonLint: ${output5}`);
+  } catch (err) {
+    return res.status(500).send(
+      `Filters didn't complete for ${filename}: ${err}`);
   }
 });
 

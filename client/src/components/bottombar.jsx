@@ -2,7 +2,7 @@ import React from "react";
 
 const Bar = ({ text, onClickFunction }) =>
   <div id="bar">
-    This is the bottom bar!
+    Results
     <pre>
       {text}
     </pre>
